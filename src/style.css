@@ -1,0 +1,7 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+.tip {
+    @apply bg-cyan-900 text-white col-span-6 justify-self-center
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="grid grid-cols-12">
+  <header class="bg-cyan-100 p-8 col-span-12 grid">
+    <img class="justify-self-center" src="/images/logo.svg" alt="logo">
+  </header>
+
+  <main class="bg-green-600 rounded-t-xl p-6 col-span-12 grid grid-cols-12">
+    <h2 class="col-span-12">Bill</h2>
+    <div class="bg-gray-200 p-2 col-span-12 grid grid-cols-12">
+      <span class="col-span-6">$</span>
+      <span class="col-span-6 justify-self-end">142.55</span>
+    </div>
+
+    <h2 class="mt-6 mb-2 col-span-12">Select Tip %</h2>
+    <div class="tip">5%</div>
+    <div class="tip right">10%</div>
+    <div class="tip">15%</div>
+    <div class="tip right">25%</div>
+    <div class="tip">50%</div>
+    <div class="tip right">Custom</div>
+
+    <h3 class="col-span-12">Number of People</h3>
+    <div class="bg-gray-200 p-2 col-span-12 grid grid-cols-12">
+      <img class="col-span-6" src="/images/icon-person.svg" alt="icon-person">
+      <div class="col-span 6 justify-end">5</div>
+    </div>
+
+    <section class="col-span-12 grid grid-cols-12">
+      <div class="col-span-12 grid grid-cols-12">
+        <div class="col-span-6">
+          <span>Tip Amount</span>
+          <br>
+          <span>/</span>
+          <span>person</span>
+        </div>
+        <div>$4.27</div>
+      </div>
+      <div class="col-span-12 grid grid-cols-12">
+        <div class="col-span-6">
+          <span>Total</span>
+          <br>
+          <span>/</span>
+          <span>person</span>
+        </div>
+        <div>$32.79</div>
+      </div>
+      <button class="col-span-12">RESET</button>
+    </section>
+  </main>
+</body>
+</html>
