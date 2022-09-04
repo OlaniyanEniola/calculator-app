@@ -5,5 +5,9 @@
 @import "tailwindcss/utilities";
 
 .tip {
-    @apply bg-cyan-900 font-semibold font-main text-white w-1/2 h-4/5 rounded col-span-6 justify-self-center text-center
+    @apply bg-cyan-900 text-white font-semibold w-full  rounded col-span-6 text-center
+}
+
+h1, h2, h3 {
+    @apply text-gray-500
 }
