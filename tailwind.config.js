@@ -6,6 +6,7 @@ module.exports = {
       fontFamily: {
         main: ['Space Mono']
       }
+      
     },
   },
   plugins: [],
