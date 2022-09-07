@@ -561,11 +561,6 @@ video {
   grid-column: span 6 / span 6;
 }
 
-.my-4{
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
 .my-3{
   margin-top: 0.75rem;
   margin-bottom: 0.75rem;
@@ -768,8 +763,12 @@ h1,  h2,  h3{
     grid-column: span 6 / span 6;
   }
 
-  .md\:col-start-8{
-    grid-column-start: 8;
+  .md\:p-10{
+    padding: 2.5rem;
+  }
+
+  .md\:p-32{
+    padding: 8rem;
   }
 }
 
