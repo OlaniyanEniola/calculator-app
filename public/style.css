@@ -553,6 +553,18 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.relative{
+  position: relative;
+}
+
+.top-1{
+  top: 0.25rem;
+}
+
+.bottom-1{
+  bottom: 0.25rem;
+}
+
 .col-span-12{
   grid-column: span 12 / span 12;
 }
@@ -786,6 +798,10 @@ video {
 
 .p-3{
   padding: 0.75rem;
+}
+
+.p-9{
+  padding: 2.25rem;
 }
 
 .py-6{
