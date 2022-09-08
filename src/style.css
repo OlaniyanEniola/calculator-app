@@ -9,5 +9,5 @@
 }
 
 h1, h2, h3 {
-    @apply text-gray-500
+    @apply text-primary-400
 }

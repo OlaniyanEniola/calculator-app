@@ -665,6 +665,36 @@ video {
   background-color: rgb(103 232 249 / var(--tw-bg-opacity));
 }
 
+.bg-primary-100{
+  --tw-bg-opacity: 1;
+  background-color: hsl(189 41% 97% / var(--tw-bg-opacity));
+}
+
+.bg-primary-300{
+  --tw-bg-opacity: 1;
+  background-color: hsl(184 14% 56% / var(--tw-bg-opacity));
+}
+
+.bg-primary-200{
+  --tw-bg-opacity: 1;
+  background-color: hsl(185 41% 84% / var(--tw-bg-opacity));
+}
+
+.bg-cyan-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
+}
+
+.bg-primary-500{
+  --tw-bg-opacity: 1;
+  background-color: hsl(183 100% 15% / var(--tw-bg-opacity));
+}
+
+.bg-primary-400{
+  --tw-bg-opacity: 1;
+  background-color: hsl(186 14% 43% / var(--tw-bg-opacity));
+}
+
 .p-12{
   padding: 3rem;
 }
@@ -715,6 +745,16 @@ video {
   line-height: 2.25rem;
 }
 
+.text-lg{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-2xl{
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 .font-semibold{
   font-weight: 600;
 }
@@ -748,6 +788,51 @@ video {
   color: rgb(22 78 99 / var(--tw-text-opacity));
 }
 
+.text-cyan-400{
+  --tw-text-opacity: 1;
+  color: rgb(34 211 238 / var(--tw-text-opacity));
+}
+
+.text-primary-400{
+  --tw-text-opacity: 1;
+  color: hsl(186 14% 43% / var(--tw-text-opacity));
+}
+
+.text-primary-500{
+  --tw-text-opacity: 1;
+  color: hsl(183 100% 15% / var(--tw-text-opacity));
+}
+
+.text-cyan-500{
+  --tw-text-opacity: 1;
+  color: rgb(6 182 212 / var(--tw-text-opacity));
+}
+
+.text-primary-100{
+  --tw-text-opacity: 1;
+  color: hsl(189 41% 97% / var(--tw-text-opacity));
+}
+
+.text-primary-200{
+  --tw-text-opacity: 1;
+  color: hsl(185 41% 84% / var(--tw-text-opacity));
+}
+
+.text-primary-300{
+  --tw-text-opacity: 1;
+  color: hsl(184 14% 56% / var(--tw-text-opacity));
+}
+
+.text-cyan-600{
+  --tw-text-opacity: 1;
+  color: rgb(8 145 178 / var(--tw-text-opacity));
+}
+
+.text-cyan-700{
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity));
+}
+
 .tip{
   grid-column: span 6 / span 6;
   width: 100%;
@@ -770,7 +855,7 @@ video {
 
 h1,  h2,  h3{
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
+  color: hsl(186 14% 43% / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px){
