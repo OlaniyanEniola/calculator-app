@@ -7,6 +7,13 @@
 .tip {
     @apply bg-primary-500 text-white text-xl w-full p-2 rounded col-span-6 text-center lg:col-span-4
 }
+.fifteen {
+    @apply bg-secondary text-primary-500 text-xl w-full p-2 rounded col-span-6 text-center lg:col-span-4
+}
+.custom {
+    @apply bg-primary-100 text-primary-400 text-xl w-full p-2 pl-10 rounded col-span-6 text-center lg:col-span-4
+}
+
 
 h1, h2, h3 {
     @apply text-primary-400
