@@ -739,11 +739,6 @@ video {
   color: hsl(172 67% 45% / var(--tw-text-opacity));
 }
 
-.text-primary-400{
-  --tw-text-opacity: 1;
-  color: hsl(186 14% 43% / var(--tw-text-opacity));
-}
-
 .tip{
   grid-column: span 6 / span 6;
   width: 100%;
@@ -797,6 +792,13 @@ video {
   line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: hsl(186 14% 43% / var(--tw-text-opacity));
+}
+
+.custom:focus{
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(239 68 68 / var(--tw-border-opacity));
 }
 
 @media (min-width: 1024px){
