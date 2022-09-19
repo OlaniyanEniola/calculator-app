@@ -9,8 +9,8 @@
 }
 
 .custom {
-    @apply bg-primary-100 text-primary-400 text-xl w-full p-2 pl-10 rounded col-span-6 text-center lg:col-span-4 
-    focus:border-solid focus:border-2 focus:border-red-500
+    @apply bg-primary-100 text-primary-400 text-xl w-full p-2 pl-10 rounded col-span-6 text-center lg:col-span-4 outline-none
+    focus:border-solid focus:border-2 focus:border-cyan-500
 }
 
 h1, h2, h3 {
