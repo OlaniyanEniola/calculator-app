@@ -17,27 +17,28 @@
 
     <div class="col-span-12 grid grid-cols-12 lg:col-span-6">
       <h1 class="text-sm mb-1 col-span-12 md:col-span-6">Bill</h1>
-      <div class="bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center hover:border-solid hover:border-2 hover:border-secondary">
+      <input type="number" min="1" class="bill bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center">
         <span class="col-span-6">
-          <img src="images/icon-dollar.svg" alt="dollar sign">
+          <!-- <img src="images/icon-dollar.svg" alt="dollar sign"> -->
         </span>
-        <span class="text-xl text-primary-300 col-span-6 justify-self-end">0</span>
-      </div>
+        <!-- <input type="number" class="text-xl text-primary-300 col-span-6 justify-self-end" placeholder="0"></input> -->
+      </input>
       <section class="mb-6 col-span-12 grid grid-cols-12 gap-3">
         <h2 class="text-sm col-span-12">Select Tip %</h2>
-        <div class="tip">5%</div>
-        <div class="tip">10%</div>
-        <div class="tip">15%</div>
-        <div class="tip">25%</div>
-        <div class="tip">50%</div>
-        <input class="custom" type="text" placeholder="Custom">
+        <div class="tip" value="5">5%</div>
+        <div class="tip" value="10">10%</div>
+        <div class="tip" value="15">15%</div>
+        <div class="tip" value="25">25%</div>
+        <div class="tip" value="50">50%</div>
+        <input type="number" min="1" class="custom" placeholder="Custom">
       </section>
 
-      <h3 class=" text-sm mb-1 col-span-12">Number of People</h3>
-      <div class="bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center">
-        <img class="col-span-6" src="images/icon-person.svg" alt="icon-person">
-        <div class="text-xl text-primary-300 col-span-6 justify-self-end">0</div>
-      </div>
+      <!--NUMBER OF PEOPLE-->
+      <h3 class="text-sm mb-1 col-span-12">Number of People</h3>
+      <input type="number" min="1" class="people bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center">
+        <!-- <img class="col-span-6" src="images/icon-person.svg" alt="icon-person"> -->
+        <!-- <div class="text-xl text-primary-300 col-span-6 justify-self-end" id="people" placeholder="0"></div> -->
+      </input>
     </div>
 
     <section class="bg-primary-600 py-6 px-4 rounded-xl col-span-12 grid grid-cols-12 lg:col-start-8 lg:p-9">
@@ -48,7 +49,7 @@
           <span class="text-primary-300 text-xs relative bottom-1.5">/</span>
           <span class="text-primary-300 text-xs relative bottom-1.5 right-1">person</span>
         </div>
-        <span class="text-3xl text-secondary col-span-6 justify-self-end">$0.00</span>
+        <span class="text-3xl text-secondary col-span-6 justify-self-end" id="tip-amount">$0.00</span>
       </div>
       <div class="my-3 col-span-12 grid grid-cols-12">
         <div class="col-span-6">
@@ -57,12 +58,12 @@
           <span class="text-primary-300 text-xs relative bottom-1.5">/</span>
           <span class="text-primary-300 text-xs relative bottom-1.5 right-1">person</span>
         </div>
-        <span class="text-3xl text-secondary col-span-6 justify-self-end">$0.00</span>
+        <span class="text-3xl text-secondary col-span-6 justify-self-end" id="total">$0.00</span>
       </div>
       <button class="bg-primary-500 text-primary-600 p-3 rounded-md col-span-12 lg:self-end hover:bg-cyan-200">RESET</button>
     </section>
     
   </main>
-
+  <script src="/src/script.js"></script>
 </body>
 </html>

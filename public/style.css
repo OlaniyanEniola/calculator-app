@@ -766,28 +766,21 @@ video {
   }
 }
 
+input:focus{
+  outline-color: #06b6d4;
+}
+
 .custom{
   grid-column: span 6 / span 6;
-  width: 100%;
   border-radius: 0.25rem;
   --tw-bg-opacity: 1;
   background-color: hsl(189 41% 97% / var(--tw-bg-opacity));
-  padding: 0.5rem;
-  padding-left: 2.5rem;
+  padding-left: 1rem;
   text-align: center;
   font-size: 1.25rem;
   line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: hsl(186 14% 43% / var(--tw-text-opacity));
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-
-.custom:focus{
-  border-width: 2px;
-  border-style: solid;
-  --tw-border-opacity: 1;
-  border-color: rgb(6 182 212 / var(--tw-border-opacity));
 }
 
 @media (min-width: 1024px){
@@ -801,22 +794,20 @@ h1,  h2,  h3{
   color: hsl(186 14% 43% / var(--tw-text-opacity));
 }
 
-.hover\:border-2:hover{
-  border-width: 2px;
+* {
+  box-sizing: border-box;
 }
 
-.hover\:border-solid:hover{
-  border-style: solid;
+body {
+  min-width: 330px;
 }
 
-.hover\:border-secondary:hover{
-  --tw-border-opacity: 1;
-  border-color: hsl(172 67% 45% / var(--tw-border-opacity));
+.bill {
+  background: url(/public/images/icon-dollar.svg) no-repeat left;
 }
 
-.hover\:border-red-300:hover{
-  --tw-border-opacity: 1;
-  border-color: rgb(252 165 165 / var(--tw-border-opacity));
+.people {
+  background: url(/public/images/icon-person.svg) no-repeat left;
 }
 
 .hover\:bg-cyan-200:hover{

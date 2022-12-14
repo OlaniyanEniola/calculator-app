@@ -8,11 +8,27 @@
     @apply bg-primary-600 text-white text-xl w-full p-2 rounded col-span-6 text-center lg:col-span-4 hover:bg-cyan-200 hover:text-primary-600
 }
 
+input {
+    @apply focus:outline-cyan-500
+}
+
 .custom {
-    @apply bg-primary-100 text-primary-400 text-xl w-full p-2 pl-10 rounded col-span-6 text-center lg:col-span-4 outline-none
-    focus:border-solid focus:border-2 focus:border-cyan-500
+    @apply bg-primary-100 text-primary-400 pl-4 text-xl text-center rounded col-span-6 lg:col-span-4
 }
 
 h1, h2, h3 {
     @apply text-primary-400
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    min-width: 330px;
+}
+.bill {
+    background: url(/public/images/icon-dollar.svg) no-repeat left;
+}
+.people {
+    background: url(/public/images/icon-person.svg) no-repeat left;
 }
