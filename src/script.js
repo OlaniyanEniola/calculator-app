@@ -1,5 +1,5 @@
 const billInput = document.querySelector('.bill');
-const preRegTipInput = document.querySelectorAll('.tip'); 
+const preRegTipInput = document.querySelectorAll('.tip');
 const customTipInput = document.querySelector('.custom');
 const people = document.querySelector('.people');
 const tipAmountDiv = document.getElementById('tip-amount');
@@ -32,7 +32,7 @@ billInput.addEventListener('change', (e) => {
 
 // gets custom tip input on keyup
 customTipInput.addEventListener('keyup', (e) => {
-    custom = e.target.value;
+    let custom = e.target.value;
     if (custom < 1) {
         custom = '';
     };
@@ -45,18 +45,6 @@ customTipInput.addEventListener('change', (e) => {
         custom = '';
     };
     return custom;
-});
-
-
-// gets pre-registered tip percentages
-preRegTipInput.forEach((percent) => {
-    let preRegTipPercent = percent.getAttribute('value');
-    percent.addEventListener('click', (e) => {
-        custom = preRegTipPercent;
-        console.log(preRegTipPercent);
-        console.log(custom);
-        calculateTotalPerPerson();
-    });
 });
 
 
@@ -75,20 +63,30 @@ people.addEventListener('change', (e) => {
     if (numOfPeople < 1) {
         numOfPeople = '';
     };
-    return Number(numOfPeople);
+    return numOfPeople;
 });
 
 
+
 // calculates total per person
-const calculateTotalPerPerson = () => {
-    let tipPercentage = custom/100;
-    let tipAmount = tipPercentage * bill;
-    let total = tipAmount + Number(bill);  
-    let totalPerPerson = total/numOfPeople;
-    totalDiv.innerText = `$${totalPerPerson.toFixed(2)}`;
-    let tipAmountPerPerson = tipAmount/numOfPeople;
-    tipAmountDiv.innerText = `$${tipAmountPerPerson.toFixed(2)}`;
+const calculateTotalPerPerson = (custom) => {
+    if (custom == '' || custom == custom) {
+        custom = customTipInput.value;
+        numOfPeople = people.value;
+        let tipPercentage = custom / 100;
+        let tipAmount = tipPercentage * Number(bill);
+        let total = tipAmount + Number(bill);
+        let totalPerPerson = total / numOfPeople;
+        totalDiv.innerText = `$${totalPerPerson.toFixed(2)}`;
+        let tipAmountPerPerson = Number(tipAmount) / Number(numOfPeople);
+        tipAmountDiv.innerText = `$${tipAmountPerPerson.toFixed(2)}`;
+        if (numOfPeople == '') {
+            tipAmountDiv.innerText = '$0.00';
+            totalDiv.innerText = `$${bill}`;
+        };
+    };
 };
+
 
 // CALCULATION ON EVENTS
 // calculates onkeyup
@@ -122,3 +120,12 @@ people.addEventListener('change', (e) => {
     calculateTotalPerPerson();
 });
 
+
+// gets pre-registered tip percentages and calculates onClick
+preRegTipInput.forEach((percent) => {
+    percent.addEventListener('click', (e) => {
+        let preRegTipPercent = percent.getAttribute('value');
+        customTipInput.value = Number(preRegTipPercent);
+        calculateTotalPerPerson();
+    });
+});    
