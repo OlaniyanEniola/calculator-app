@@ -4,6 +4,7 @@ const customTipInput = document.querySelector('.custom');
 const people = document.querySelector('.people');
 const tipAmountDiv = document.getElementById('tip-amount');
 const totalDiv = document.getElementById('total');
+const resetBtn = document.getElementById('resetBtn');
 
 // bill input and tip input are read onChange and onKeyup
 // tip input is converted to a percentage and multiplied with the bill to get the tip amount
@@ -129,3 +130,12 @@ preRegTipInput.forEach((percent) => {
         calculateTotalPerPerson();
     });
 });    
+
+
+// RESET
+resetBtn.addEventListener('click', (e) => {
+    billInput.value = '';
+    customTipInput.value = '';
+    tipAmountDiv.innerText = '$0.00';
+    totalDiv.innerText = '$0.00';
+});
