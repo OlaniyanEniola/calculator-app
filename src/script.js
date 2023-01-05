@@ -69,7 +69,7 @@ people.addEventListener('change', (e) => {
 
 
 
-// calculates total per person
+// calculates total per person if custom input is empty or not
 const calculateTotalPerPerson = (custom) => {
     if (custom == '' || custom == custom) {
         custom = customTipInput.value;
@@ -92,6 +92,7 @@ const calculateTotalPerPerson = (custom) => {
 // CALCULATION ON EVENTS
 // calculates onkeyup
 billInput.addEventListener('keyup', (e) => {
+    // set total to bill if totalPerPerson is not calculated
     totalDiv.innerText = `$${bill}`;
     calculateTotalPerPerson();
 });
@@ -139,3 +140,5 @@ resetBtn.addEventListener('click', (e) => {
     tipAmountDiv.innerText = '$0.00';
     totalDiv.innerText = '$0.00';
 });
+
+

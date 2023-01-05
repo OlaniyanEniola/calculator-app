@@ -755,7 +755,7 @@ video {
 
 .tip:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(183 100% 15% / var(--tw-text-opacity));
 }
@@ -803,16 +803,22 @@ body {
 }
 
 .bill {
-  background: url(/public/images/icon-dollar.svg) no-repeat left;
+  background: url(/public/images/icon-dollar.svg) no-repeat;
 }
 
 .people {
   background: url(/public/images/icon-person.svg) no-repeat left;
 }
 
-.hover\:bg-cyan-200:hover{
+.bill, .people {
+  background-position: 2% 50%;
+  color: hsl(183, 100%, 15%);
+  text-align: right;
+}
+
+.hover\:bg-cyan-500:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(165 243 252 / var(--tw-bg-opacity));
+  background-color: rgb(6 182 212 / var(--tw-bg-opacity));
 }
 
 @media (min-width: 768px){
@@ -841,6 +847,10 @@ body {
 
   .lg\:self-end{
     align-self: flex-end;
+  }
+
+  .lg\:rounded-3xl{
+    border-radius: 1.5rem;
   }
 
   .lg\:p-9{
