@@ -70,11 +70,10 @@ people.addEventListener('change', (e) => {
 
 
 // calculates total per person if custom input is empty or not
-const calculateTotalPerPerson = (custom) => {
-    if (custom == '' || custom == custom) {
-        custom = customTipInput.value;
+const calculateTotalPerPerson = (tip = customTipInput.value) => {
+    if (tip == '' || tip !== '') {
         numOfPeople = people.value;
-        let tipPercentage = custom / 100;
+        let tipPercentage = tip / 100;
         let tipAmount = tipPercentage * Number(bill);
         let total = tipAmount + Number(bill);
         let totalPerPerson = total / numOfPeople;
@@ -127,8 +126,8 @@ people.addEventListener('change', (e) => {
 preRegTipInput.forEach((percent) => {
     percent.addEventListener('click', (e) => {
         let preRegTipPercent = percent.getAttribute('value');
-        customTipInput.value = Number(preRegTipPercent);
-        calculateTotalPerPerson();
+        preRegTipPercent = Number(preRegTipPercent);
+        calculateTotalPerPerson(preRegTipPercent);
     });
 });    
 
@@ -137,6 +136,7 @@ preRegTipInput.forEach((percent) => {
 resetBtn.addEventListener('click', (e) => {
     billInput.value = '';
     customTipInput.value = '';
+    people.value = 1;
     tipAmountDiv.innerText = '$0.00';
     totalDiv.innerText = '$0.00';
 });
