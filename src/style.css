@@ -37,3 +37,7 @@ body {
     color: hsl(183, 100%, 15%);
     text-align: right;
 }
+.active {
+    background-color: rgb(6 182 212);
+    color: hsl(183, 100%, 15%);
+}

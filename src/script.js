@@ -38,7 +38,7 @@ function calcOn ([...fields], [...events]) {
         events.forEach((event) => {
             field.addEventListener(`${event}`, (e) => {
                 calculateTotalPerPerson();
-            });          
+            });
         });
     });
 };
@@ -47,23 +47,30 @@ calcOn([billInput, customTipInput, numOfpeopleInput], ['keyup', 'click']);
 // SLOT SLOT SLOT SLOT
 
 // gets pre-registered tip percentages and calculates onClick
+// loops through percentages and removes existing active class and adds active class to clicked percentage
+// gets value if percentage contains active class
 // sets customTipInput to null
-// passes preRegTipPercent as argument
+// passes preRegTipPercent as argument to calculateTotalPerPerson 
 preRegTipInput.forEach((percent) => {
     percent.addEventListener('click', (e) => {
         customTipInput.value = null;
-        let preRegTipPercent = percent.getAttribute('value');
-        preRegTipPercent = Number(preRegTipPercent);
-        calculateTotalPerPerson(preRegTipPercent);
+        for (let percent of preRegTipInput) {
+            percent.classList.remove('active');
+        }
+        percent.classList.add('active');
+        if (percent.classList.contains('active')) {
+            let preRegTipPercent = percent.getAttribute('value');
+            preRegTipPercent = Number(preRegTipPercent);
+            calculateTotalPerPerson(preRegTipPercent);
+        };
     });
-});    
-
+});
 
 // RESET
 resetBtn.addEventListener('click', (e) => {
     billInput.value = '';
     customTipInput.value = '';
-    people.value = 1;
+    numOfpeopleInput.value = 1;
     tipAmountDiv.innerText = '$0.00';
     totalDiv.innerText = '$0.00';
 });
