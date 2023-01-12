@@ -29,10 +29,10 @@ body {
 .bill {
     background: url(/public/images/icon-dollar.svg) no-repeat;
 }
-.people {
+.people__num {
     background: url(/public/images/icon-person.svg) no-repeat left;
 }
-.bill, .people {
+.bill, .people__num {
     background-position: 2% 50%;
     color: hsl(183, 100%, 15%);
     text-align: right;
@@ -40,4 +40,10 @@ body {
 .active {
     background-color: rgb(6 182 212);
     color: hsl(183, 100%, 15%);
+}
+.people__message--error {
+    color: red;
+}
+.people__num--error {
+    outline: 0.15em solid hsla(0, 100%, 50%, 0.692);
 }

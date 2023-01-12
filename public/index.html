@@ -18,7 +18,7 @@
     <div class="col-span-12 grid grid-cols-12 lg:col-span-6">
       <!--BILL-INPUT-->
       <h1 class="text-sm mb-1 col-span-12 md:col-span-6">Bill</h1>
-      <input type="number" min="1" class="bill bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center">
+      <input type="number" min="0" placeholder="0" class="bill bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center">
         <span class="col-span-6">
           <!-- <img src="images/icon-dollar.svg" alt="dollar sign"> -->
         </span>
@@ -35,11 +35,8 @@
       </section>
 
       <!--NUMBER OF PEOPLE-->
-      <h3 class="text-sm mb-1 col-span-12">Number of People</h3>
-      <input type="number" value="1" min="1" class="people bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center">
-        <!-- <img class="col-span-6" src="images/icon-person.svg" alt="icon-person"> -->
-        <!-- <div class="text-xl text-primary-300 col-span-6 justify-self-end" id="people" placeholder="0"></div> -->
-      </input>
+      <h3 class="people__message text-sm mb-1 col-span-12">Number of People</h3>
+      <input type="number" min="0" placeholder="0" class="people__num bg-primary-100 mb-6 p-2 rounded col-span-12 grid grid-cols-12 items-center"></input>
     </div>
 
     <!--TIP AMOUNT AND TOTAL-->
@@ -51,6 +48,7 @@
           <span class="text-primary-300 text-xs relative bottom-1.5">/</span>
           <span class="text-primary-300 text-xs relative bottom-1.5 right-1">person</span>
         </div>
+        <!--TIP AMOUNT-->
         <span class="text-3xl text-secondary col-span-6 justify-self-end" id="tip-amount">$0.00</span>
       </div>
       <div class="my-3 col-span-12 grid grid-cols-12">
@@ -60,6 +58,7 @@
           <span class="text-primary-300 text-xs relative bottom-1.5">/</span>
           <span class="text-primary-300 text-xs relative bottom-1.5 right-1">person</span>
         </div>
+        <!--TOTAL-->
         <span class="text-3xl text-secondary col-span-6 justify-self-end" id="total">$0.00</span>
       </div>
       <button id="resetBtn" class="bg-primary-500 text-primary-600 p-3 rounded-md col-span-12 lg:self-end hover:bg-cyan-500">RESET</button>
