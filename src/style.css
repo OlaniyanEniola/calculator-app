@@ -5,7 +5,8 @@
 @import "tailwindcss/utilities";
 
 .tip {
-    @apply bg-primary-600 text-white text-xl w-full p-2 rounded col-span-6 text-center lg:col-span-4 hover:bg-cyan-500 hover:text-primary-600
+    @apply bg-primary-600 text-white text-xl w-full p-2 rounded col-span-6 text-center lg:col-span-4 
+    /* hover:bg-cyan-500 hover:text-primary-600 */
 }
 
 input {
