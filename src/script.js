@@ -17,9 +17,10 @@ const resetBtn = document.getElementById('resetBtn');
 
 // CALCULATES TOTAL PER PERSON 
 // customTipInput is set to default parameter
-function calculateTotalPerPerson(tip = customTipInput.value) {
+function calculateTotalPerPerson() {
     let bill = billInput.value;
     let numOfPeople = numOfPeopleInput.value;
+    let tip = customTipInput.value;
     togglePeopleErr();
     if (bill == '' || numOfPeople == '' || numOfPeople < 1) {
         tipAmountDiv.innerText = '$0.00';
@@ -50,10 +51,12 @@ preRegTipInput.forEach((percent) => {
         if (percent.classList.contains('active')) {
             customTipInput.value = null;
             let preRegTipPercent = Number(percent.getAttribute('value'));
-            calculateTotalPerPerson(preRegTipPercent);
-        };
+            customTipInput.value = preRegTipPercent;
+            calculateTotalPerPerson();
+        }
     });
 });
+// };
 
 
 // CALCULATION ON INTERACTION(EVENTS)
@@ -80,7 +83,6 @@ function togglePeopleErr() {
         numOfPeopleErrMessage.classList.add('hidden');
     };
 };
-// togglePeopleErr();
 
 
 // REMOVE ACTIVE CLASS FROM PERCENT IF CUSTOM TIP INPUT OR RESET BUTTON IS CLICKED
