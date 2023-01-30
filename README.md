@@ -4,7 +4,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 
 ## Table of contents
 
-- [Overview](#overview)
+<!-- - [Overview](#overview) -->
 - [The challenge](#the-challenge)
 - [Links](#links)
 - [My process](#my-process)
@@ -18,10 +18,10 @@ Users should be able to:
 - See hover states for all interactive elements on the page
 - Calculate the correct tip and total cost of the bill per person
 
-### Links
+<!-- ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
 
 
 ### Built with
@@ -34,7 +34,7 @@ Users should be able to:
 - Mobile-first workflow
 
 
-- Website - [Add your name here](https://www.your-site.com)
+<!-- - Website - [Add your name here](https://www.your-site.com) -->
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/OlaniyanEniola)
 - Twitter - [@yourusername](https://www.twitter.com/@OlaniyanEniola5)
 
