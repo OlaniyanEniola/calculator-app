@@ -43,7 +43,7 @@ function calculateTotalPerPerson() {
 preRegTipInput.forEach((percent) => {
     percent.addEventListener('click', (e) => {
 
-// loops through percentages and removes existing active class by default everytime this runs to prevent multiple active classes
+// loops through percentages and removes existing active class from every percentage by default everytime a percentage is clicked to prevent multiple active classes
         for (let percent of preRegTipInput) {
             percent.classList.remove('active');
         };
@@ -51,14 +51,13 @@ preRegTipInput.forEach((percent) => {
         percent.classList.add('active');
 // break if active class is absent
         if (!percent.classList.contains('active')) {
-            console.log('test')
             return;
         };
 // if active class is absent code below doesn't run
 
 // code below runs if active class is present
         let preRegTipPercent;
-// if active class is present TOGGLE on click
+// if active class is present TOGGLE on click ( IN PROGRESS ... )
         // percent.addEventListener('click', (e) => {
         //     if (!percent.classList.contains('active')) {
         //         percent.classList.add('active');
@@ -73,7 +72,7 @@ preRegTipInput.forEach((percent) => {
 // passes preRegTipPercent as customTipInput.value to feed the tip into calculateTotalPerPerson function
         preRegTipPercent = Number(percent.getAttribute('value'));
         customTipInput.value = preRegTipPercent;
-// toggle focus on customTipInput when customTipInput.value is set to preRegTipPercent or is cleared
+// toggle cutomTipInput and customTipInputDecoy
         if (customTipInput.value == preRegTipPercent) {
             preRegTipInputContainer.classList.add('blur');
             if (customTipInput.blur) {
@@ -81,7 +80,7 @@ preRegTipInput.forEach((percent) => {
                 customTipInputDecoy.classList.remove('hide')
                 customTipInputDecoy.classList.add('custom')
             };
-            customTipInputDecoy.addEventListener('click', (e) => {
+            customTipInputDecoy.addEventListener('focus', (e) => {
                 customTipInputDecoy.classList.add('hide')
                 customTipInput.classList.remove('hide')
                 percent.classList.remove('active');
@@ -95,10 +94,14 @@ preRegTipInput.forEach((percent) => {
             });
         };
             
-// calulate every time percent is clicked and active class id added         
+// calulate every time percent is clicked and active class is added         
         calculateTotalPerPerson();
     });
 });
+
+
+
+
 
 
 // CALCULATION ON INTERACTION(EVENTS)
