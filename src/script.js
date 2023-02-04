@@ -1,7 +1,7 @@
 const billInput = document.querySelector('.bill');
 const preRegTipInput = document.querySelectorAll('.tip');
+const preReg = document.querySelector('.pre-reg');
 const customTipInput = document.querySelector('.custom');
-const customTipInputDecoy = document.querySelector('.custom-decoy');
 const numOfPeopleErrMessage = document.querySelector('.people__message--err');
 const numOfPeopleInput = document.querySelector('.people__num');
 const tipAmountDiv = document.getElementById('tip-amount');
@@ -22,7 +22,7 @@ const preRegTipInputContainer = document.querySelector('.tips');
 function calculateTotalPerPerson() {
     let bill = billInput.value;
     let numOfPeople = numOfPeopleInput.value;
-    let tip = customTipInput.value;
+    let tip = customTipInput.value || preReg.value;
     togglePeopleErr();
     if (bill == '' || numOfPeople == '' || numOfPeople < 1) {
         tipAmountDiv.innerText = '$0.00';
@@ -56,46 +56,24 @@ preRegTipInput.forEach((percent) => {
 // if active class is absent code below doesn't run
 
 // code below runs if active class is present
-        let preRegTipPercent;
-// if active class is present TOGGLE on click ( IN PROGRESS ... )
-        // percent.addEventListener('click', (e) => {
-        //     if (!percent.classList.contains('active')) {
-        //         percent.classList.add('active');
-        //         customTipInput.value = preRegTipPercent;
-        //     } else {
-        //         percent.classList.remove('active');
-        //         customTipInput.value = null;
-        //     };
-        // });
-	
-// gets value if percentage contains active class
-// passes preRegTipPercent as customTipInput.value to feed the tip into calculateTotalPerPerson function
+
+// sets customTipInput.value to null if percent is clicked
+        customTipInput.value = null;
+// gets value if percent contains active class
+        let preRegTipPercent;	
+// passes preRegTipPercent as preReg.value to feed the tip into calculateTotalPerPerson function
         preRegTipPercent = Number(percent.getAttribute('value'));
-        customTipInput.value = preRegTipPercent;
-// toggle cutomTipInput and customTipInputDecoy
-        if (customTipInput.value == preRegTipPercent) {
-            preRegTipInputContainer.classList.add('blur');
-            if (customTipInput.blur) {
-                customTipInput.classList.add('hide')
-                customTipInputDecoy.classList.remove('hide')
-                customTipInputDecoy.classList.add('custom')
-            };
-            customTipInputDecoy.addEventListener('focus', (e) => {
-                customTipInputDecoy.classList.add('hide')
-                customTipInput.classList.remove('hide')
-                percent.classList.remove('active');
-                customTipInput.focus();
-            });
+        preReg.value = preRegTipPercent;
+// set preReg.value to null on focus of customTipInput
+        if (preReg.value == preRegTipPercent) {
             customTipInput.addEventListener('focus', (e) => {
-                preRegTipInputContainer.classList.remove('blur');
-                customTipInput.value = null;
-                // calulate again as custom tip input is now null           
+                preReg.value = null;
+// calulate as the value preReg is now null           
                 calculateTotalPerPerson();
             });
-        };
-            
-// calulate every time percent is clicked and active class is added         
-        calculateTotalPerPerson();
+// calculate if preReg.value == preRegTipPercent 
+            calculateTotalPerPerson();
+        };            
     });
 });
 
